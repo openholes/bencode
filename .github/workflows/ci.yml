@@ -38,6 +38,10 @@ jobs:
         run: goimports-reviser -format .
       - name: check for unformatted code
         run: git diff --exit-code
+      - name: install lintool
+        run: go install github.com/openholes/lintool@latest
+      - name: run lintool
+        run: lintool blankline && lintool license
       - name: golangci-lint
         uses: golangci/golangci-lint-action@v7
         with:

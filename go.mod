@@ -1,4 +1,4 @@
-module github.com/openholes/bencode
+module github.com/opencave/bencode
 
 go 1.22
 
